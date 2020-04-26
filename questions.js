@@ -107,11 +107,14 @@ function showQuestions() {
     document.getElementById("end-screen").style.display = "block";
     //show score
     document.getElementById("final-score").innerHTML = index - incorrect;
+
+    document.getElementById("submit").addEventListener("click", function () {
+        localStorage.setItem("highScore", initials.input)
+        location.href="highscores.html";
+    })
     };
 
-    document.getElementById("submit-button").addEventListener("click", function () {
-        localStorage.setItem("highScore", initials.input)
-    })
+    
 
   
 
